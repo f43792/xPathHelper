@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore dbUpdate="2017-Jan-19">
+  <book>
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>59.99</price>
+  </book>
+
+   <book>
+    <title lang="pt_BR">LIVRO PROTOCOLO BLUEHAND: ALIENÍGENAS</title>
+    <author>Eduardo Spohr</author>
+    <year>2011</year>
+    <price>29.90</price>
+  </book>
+
+  <book>
+    <title lang="en">Cosmos</title>
+    <author>Carl Segan</author>
+    <year>1998</year>
+    <price>32.00</price>
+  </book>
+
+</bookstore>

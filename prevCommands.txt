@@ -1,0 +1,7 @@
+//book
+/bookstore/book[price<40]/title
+/bookstore/book[price>40]/title
+//CabinCatalogItem.Name
+//title[@lang='en']
+//title[@lang='en']/..
+//title[@lang='en']/../title
