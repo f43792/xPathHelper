@@ -1,7 +1,7 @@
 object MainForm: TMainForm
   Left = 411
   Height = 896
-  Top = 104
+  Top = 77
   Width = 1507
   Caption = 'XPath Helper by FCN r6805 - EMBRAER S.A.'
   ClientHeight = 871
@@ -121,15 +121,15 @@ object MainForm: TMainForm
       ParentFont = False
       TabOrder = 0
     end
-    object StaticText2: TStaticText
+    object stXML: TStaticText
       Left = 5
       Height = 32
       Top = 5
       Width = 465
       Align = alTop
-      Caption = 'XML'
+      Caption = 'XML:'
       Font.Color = clNone
-      Font.Height = -21
+      Font.Height = -24
       Font.Name = 'Sans'
       ParentFont = False
       TabOrder = 1
@@ -673,15 +673,15 @@ object MainForm: TMainForm
       ParentFont = False
       TabOrder = 0
     end
-    object StaticText1: TStaticText
+    object stSubset: TStaticText
       Left = 5
       Height = 32
       Top = 5
       Width = 465
       Align = alTop
-      Caption = 'Subset'
+      Caption = 'Subset:'
       Font.Color = clNone
-      Font.Height = -21
+      Font.Height = -24
       Font.Name = 'Sans'
       ParentFont = False
       TabOrder = 1

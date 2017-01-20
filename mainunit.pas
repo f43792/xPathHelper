@@ -25,8 +25,8 @@ type
     Panel4: TPanel;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
-    StaticText1: TStaticText;
-    StaticText2: TStaticText;
+    stSubset: TStaticText;
+    stXML: TStaticText;
     xmlOD: TOpenDialog;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -151,6 +151,7 @@ procedure TMainForm.openXMLFile(xmlFileName: String);
 begin
  ReadXMLFile(Self.Doc, xmlFileName);
  XML2Tree(Self.Doc, xmlTreeView);
+ stXML.Caption:='XML [ ' + IntToStr(xmlTreeView.Items.Count) + ' ]';
  //xmlEditor.Lines.LoadFromFile(xmlFileName);
 end;
 
@@ -182,6 +183,7 @@ var
   //sValue: String;
   //sName: String;
   i: Integer;
+  csNode: Integer; //count sub nodes
 begin
   try
     xmlEditor.Lines.Clear;
@@ -206,6 +208,7 @@ begin
           end;
         end;
       xmlSubSetTree.FullExpand;
+      stSubset.Caption:= 'Subset: [ ' + intTostr(xmlSubSetTree.Items.Count) + ' ] ';
     end else
     begin
       xmlEditor.lines.Add('NONE');
