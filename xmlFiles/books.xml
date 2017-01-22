@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<bookstore dbUpdate="2017-Jan-19">
-  <book>
-    <title lang="en">Harry Potter</title>
-    <author>J K. Rowling</author>
-    <year>2005</year>
-    <price>59.99</price>
-  </book>
+<bookstore>
 
-   <book>
-    <title lang="pt_BR">LIVRO PROTOCOLO BLUEHAND: ALIENÍGENAS</title>
-    <author>Eduardo Spohr</author>
-    <year>2011</year>
-    <price>29.90</price>
-  </book>
+    <book category="COOKING">
+        <title lang="en">Everyday Italian</title>
+        <author>Giada De Laurentiis</author>
+        <year>2015</year>
+        <price>30.00</price>
+    </book>
 
-  <book>
-    <title lang="en">Cosmos</title>
-    <author>Carl Segan</author>
-    <year>1998</year>
-    <price>32.00</price>
-  </book>
+    <book category="CHILDREN">
+        <title lang="en">Harry Potter</title>
+        <author>J K. Rowling</author>
+        <year>2007</year>
+        <price>29.99</price>
+    </book>
+
+    <book category="WEB">
+        <title lang="br">XQuery Kick Start</title>
+        <author>James McGovern</author>
+        <author>Per Bothner</author>
+        <author>Kurt Cagle</author>
+        <author>James Linn</author>
+        <author>Vaidyanathan Nagarajan</author>
+        <year>2003</year>
+        <price>49.99</price>
+    </book>
+
+    <book category="WEB">
+        <title lang="es">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2000</year>
+        <price>39.95</price>
+    </book>
 
 </bookstore>

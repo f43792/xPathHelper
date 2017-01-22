@@ -1,7 +1,144 @@
+6 + 4
+6+4
 //book
+//book/.
+//book/*
+//book[*]
+//book[0]
+//book[1]
+//book[1]/title
+//book[@category]
+//book[@category='CHILDREN']
+//book[@category!='CHILDREN']
+//book[category='CHILDREN']
+//book[category!='CHILDREN']
+//book[@category='WEB']
+//book[@category=WEB]
+//book[@category='WEB' and price<35]
+//book[@category='WEB' and ./price<45]
+//book[@category='WEB' and price<45]
+//book[@category='WEB' and price>45]
+//book[@category='WEB' and price>45]/author
+//book[@category='WEB' and price>45]/author[1]
+//book[@category='WEB' and price>45]/title
+//book[@category='WEB' and price>45]/title | //book[@category='WEB' and price>45]/year
+//book/child::*
+//book[last()]
+//book/Name
+//book/Name[1]
+//book[price>10+20]
+//book[price>20+20]
+//book[price>20]/title
+//book[price<28]
+//book[price<29]
+//book[price<29.99]
+//book[price=29.99]
+//book[price>29.99]
+//book[price<30]
+//book[price>30]/title
+//book[price<35]/.
+//book[price>35]/.
+//book[price>35]/book
+//book[price>35]/price
+//book[price>35]/title
+//book[price>35]/title | //book[price>35]/price
+//book[price>35]/title //book[price>35]/price
+//book[price>35]/title | price
+//book[price>40]
+//book[price>40]/title
+//book/price[text()]
+/bookstore/book[1]
+/bookstore/book[3]
+/bookstore/book[3]/author
+/bookstore/book[3]/author[1]
+/bookstore/book[3]/author[2]
+/bookstore/book[3]/author[3]
+/bookstore/book[3]/author[4]
+/bookstore/book[3]/author[5]
+/bookstore/book[3]/author[6]
 /bookstore/book[price<40]/title
 /bookstore/book[price>40]/title
+/bookstore/book/title | //price
+//book/title
+//book/title/../.
+//book/title/../..
+//book[*]/title
+//book/title | //book/price
+//book/title[@lang='en']
+//book/title[@Lang='en']
+//book/title[@lang='en']/..
+//book/title[@lang='en']/..//*
+//book/title[@lang!='en']/..
+//book/title[@lang='en']/..//price
+//book/title[@lang='en']/../*[price>40]
+//book/title[price>40]
+//CabinCatalogItem.CustomerName
+//CabinCatalogItem.Description
 //CabinCatalogItem.Name
+//CatalogItem.Id
+child::*
+child::book
+//Deck
+//Deck/Deck.NumberOfAisles
+//Deck.NumberOfAisles
+//layout
+/Layout//*
+//Layout.ACTypeAndSeries
+Layout.ACTypeAndSeries
+//Layout/CabinCatalogItem.Description
+//Layout//CatalogItem.Id
+//Layout//CatalogItem.Id[1]
+//Layout.ExpandedOptions
+//Layout.ItemStatistics/ItemStatistics
+//Layout.ItemStatistics/ItemStatistics//PAXPerCASRatio
+//Layout.ItemStatistics/ItemStatistics//PAXPerCASRatio/..
+//Layout.ItemStatistics/ItemStatistics//PAXPerCASRatio..
+//Layout.ItemStatistics/ItemStatistics//PAXPerCASRatio[1]
+//Layout.ItemStatistics/PAXPerCASRatio
+//Layout.ItemStatistics//PAXPerCASRatio
+//Layout.ItemStatistics//PAXPerCASRatio[1]
+//Layout.ItemStatistics//PAXPerCASRatio[1]/text
+//Layout.ItemStatistics//PAXPerCASRatio[2]
+//Layout//Layout.OperatorCode
+//Layout/@Layout.OperatorCode
+//Layout/Layout.OperatorCode
+//Layout/@Name
+//Layout[@Name='P3CD-1L']
+//Layout[@Name="P3CD-1L"]
+//Layout[Name="P3CD-1L"]
+//Layout[Name="P3CD-1L"]/*
+//@Layout.OperatorCode
+//Layout.OperatorCode
+//Layout.OperatorCode/..
+//Layout.OperatorCode/../..
+@Layout.OperatorCode
+Layout.OperatorCode
+//Layout.OperatorName
+//Layout.ProjectName
+//Layout/Properties
+/Layout/Properties//*
+/Layout/Properties/*
+/Layout/Properties//Layout.OperatorCode
+/Layout/Properties/Layout.OperatorCode
+//Layout/Properties/PAXPerLavatoryRatio
+//Layout/Properties//PAXPerLavatoryRatio
+//PAXPerCASRatio
+/Project
+/Project/Layout
+Project/Layout/Children/Deck/Properties/Deck.NumberOfAisles
+/Project/Layout/@Name
+/Project/Layout/Properties
+/Project/Layout/Properties/CabinCatalogItem.Description
+/Project/Layout/Properties/Layout.ACTypeAndSeries
+/Project/Layout/Properties/Layout.ProjectName
+/Project/Layout/Properties/OperatorCode
+substring-after(//Layout.ACTypeAndSeries, "Embraer ")
+substring-after(@Layout.ACTypeAndSeries, "Embraer ")
+//title[@*]
 //title[@lang='en']
 //title[@lang='en']/..
 //title[@lang='en']/../title
+//title | //price
+//*[year=2005]
+//*[year=2005]/..
+//Zone

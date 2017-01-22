@@ -1,30 +1,33 @@
 object MainForm: TMainForm
-  Left = 703
+  Left = 2107
   Height = 896
-  Top = 164
-  Width = 1611
+  Top = 76
+  Width = 1507
   Caption = 'XPath Helper by FCN r6805 - EMBRAER S.A.'
   ClientHeight = 877
-  ClientWidth = 1611
+  ClientWidth = 1507
+  Color = 1710618
   Menu = AppMainMenu
+  OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
   LCLVersion = '1.4.4.0'
-  WindowState = wsMaximized
   object Panel1: TPanel
     Left = 0
     Height = 192
     Top = 0
-    Width = 1611
+    Width = 1507
     Align = alTop
+    BevelOuter = bvNone
     ClientHeight = 192
-    ClientWidth = 1611
+    ClientWidth = 1507
     TabOrder = 0
     object ToolBar1: TToolBar
-      Left = 1
+      Left = 0
       Height = 39
-      Top = 1
-      Width = 1609
+      Top = 0
+      Width = 1507
       ButtonHeight = 32
       ButtonWidth = 32
       Caption = 'ToolBar1'
@@ -36,82 +39,231 @@ object MainForm: TMainForm
         Caption = '&Open ...'
         OnClick = ToolButton1Click
       end
+      object ToolButton2: TToolButton
+        Left = 33
+        Top = 2
+        Caption = 'ToolButton2'
+        OnClick = ToolButton2Click
+      end
     end
-    object edXpathQry: TEdit
-      Left = 26
-      Height = 32
-      Top = 64
-      Width = 734
-      AutoSize = False
-      AutoSelect = False
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -21
-      Font.Name = 'Arial monospaced for SAP'
-      Font.Pitch = fpFixed
-      Font.Quality = fqDraft
-      OnKeyPress = edXpathQryKeyPress
-      ParentFont = False
+    object pLeftMainCommand: TPanel
+      Left = 0
+      Height = 153
+      Top = 39
+      Width = 919
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 153
+      ClientWidth = 919
       TabOrder = 1
+      OnClick = pLeftMainCommandClick
+      object Panel5: TPanel
+        Left = 0
+        Height = 151
+        Top = 0
+        Width = 919
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 151
+        ClientWidth = 919
+        TabOrder = 0
+        object stXML1: TStaticText
+          Left = 0
+          Height = 32
+          Top = 0
+          Width = 919
+          Align = alTop
+          Caption = 'XPath query:'
+          Font.Color = 625617
+          Font.Height = -24
+          Font.Name = 'Sans'
+          ParentFont = False
+          TabOrder = 0
+        end
+        object edXpathQry: TEdit
+          Left = 2
+          Height = 30
+          Top = 34
+          Width = 915
+          Align = alTop
+          AutoSize = False
+          AutoSelect = False
+          BorderSpacing.Around = 2
+          BorderStyle = bsNone
+          Color = 3158064
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = 625617
+          Font.Height = -21
+          Font.Name = 'Sans'
+          Font.Pitch = fpFixed
+          Font.Quality = fqDraft
+          OnKeyPress = edXpathQryKeyPress
+          ParentFont = False
+          TabOrder = 1
+          Text = '//'
+        end
+        object stXML2: TStaticText
+          Left = 0
+          Height = 32
+          Top = 66
+          Width = 919
+          Align = alTop
+          Caption = 'Pace XPath format:'
+          Font.Color = 625617
+          Font.Height = -24
+          Font.Name = 'Sans'
+          ParentFont = False
+          TabOrder = 2
+        end
+        object edPaceStr: TEdit
+          Left = 2
+          Height = 30
+          Top = 100
+          Width = 915
+          Align = alTop
+          AutoSize = False
+          AutoSelect = False
+          BorderSpacing.Around = 2
+          BorderStyle = bsNone
+          Color = 3158064
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = 625617
+          Font.Height = -21
+          Font.Name = 'Sans'
+          Font.Pitch = fpFixed
+          Font.Quality = fqDraft
+          OnKeyPress = edXpathQryKeyPress
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 3
+          Text = '//'
+        end
+      end
     end
-    object prevCommands: TListBox
-      Left = 784
-      Height = 120
-      Top = 56
-      Width = 396
-      ExtendedSelect = False
-      Items.Strings = (
-        '/bookstore/book[price<40]/title'
-        '/bookstore/book[price>40]/title'
-        '//title[@lang=''en'']'
-      )
-      ItemHeight = 0
-      OnDblClick = prevCommandsDblClick
-      OnSelectionChange = prevCommandsSelectionChange
-      Style = lbOwnerDrawFixed
+    object Panel6: TPanel
+      Left = 924
+      Height = 153
+      Top = 39
+      Width = 583
+      Align = alClient
+      BevelOuter = bvSpace
+      BevelWidth = 4
+      ClientHeight = 153
+      ClientWidth = 583
       TabOrder = 2
+      object prevCommands: TListBox
+        Left = 4
+        Height = 145
+        Top = 4
+        Width = 575
+        Align = alClient
+        BorderStyle = bsNone
+        Color = 3158064
+        ExtendedSelect = False
+        Font.Color = 625617
+        Font.Height = -13
+        Font.Name = 'Arial monospaced for SAP'
+        Items.Strings = (
+          '//title[@lang=''en'']'
+          '/bookstore/book[price<40]/title'
+          '/bookstore/book[price>40]/title'
+        )
+        ItemHeight = 15
+        OnDblClick = prevCommandsDblClick
+        ParentFont = False
+        ScrollWidth = 394
+        Sorted = True
+        TabOrder = 0
+      end
+    end
+    object Splitter3: TSplitter
+      Left = 919
+      Height = 153
+      Top = 39
+      Width = 5
     end
   end
   object Panel2: TPanel
     Left = 0
-    Height = 685
+    Height = 662
     Top = 192
     Width = 475
     Align = alLeft
+    BevelOuter = bvNone
     BorderWidth = 4
-    Caption = 'Panel2'
-    ClientHeight = 685
+    ClientHeight = 662
     ClientWidth = 475
     TabOrder = 1
     object xmlTreeView: TTreeView
-      Left = 5
-      Height = 675
-      Top = 5
-      Width = 465
+      Left = 4
+      Height = 622
+      Top = 36
+      Width = 467
       Align = alClient
-      BackgroundColor = clGrayText
-      Color = clGrayText
-      DefaultItemHeight = 16
+      BackgroundColor = 3158064
+      BorderStyle = bsNone
+      Color = clWhite
+      DefaultItemHeight = 24
+      ExpandSignColor = 625617
+      ExpandSignType = tvestPlusMinus
+      Font.Color = 625617
+      Font.Height = -13
+      Font.Name = '@FreeSans'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      SelectionColor = clPurple
       TabOrder = 0
+      OnGetSelectedIndex = xmlTreeViewGetSelectedIndex
+      OnSelectionChanged = xmlTreeViewSelectionChanged
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+      Items.Data = {
+        F9FFFFFF020002000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF040000000000
+        000001050000004974656D30FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000
+        0000000000050000004974656D31FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00000000000000050000004974656D32FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        000000000000000000050000004974656D33FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFF000000000000000000050000004974656D34FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFF040000000000000001050000004974656D35FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFF000000000000000000050000004974656D36FFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFF000000000000000000050000004974656D37FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF000000000000000000050000004974656D38FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000050000004974656D39
+      }
+      TreeLineColor = 625617
+    end
+    object stXML: TStaticText
+      Left = 4
+      Height = 32
+      Top = 4
+      Width = 467
+      Align = alTop
+      Caption = 'XML:'
+      Font.Color = 625617
+      Font.Height = -24
+      Font.Name = 'Sans'
+      ParentFont = False
+      TabOrder = 1
     end
   end
   object Panel3: TPanel
     Left = 960
-    Height = 685
+    Height = 662
     Top = 192
-    Width = 651
+    Width = 547
     Align = alClient
     BorderWidth = 4
-    Caption = 'Panel3'
-    ClientHeight = 685
-    ClientWidth = 651
+    ClientHeight = 662
+    ClientWidth = 547
     TabOrder = 3
     inline xmlEditor: TSynEdit
       Left = 5
-      Height = 675
+      Height = 652
       Top = 5
-      Width = 641
+      Width = 537
       Align = alClient
-      Color = clGrayText
+      Color = clBtnShadow
+      Font.Color = clSilver
       Font.Height = -13
       Font.Name = 'Courier New'
       Font.Pitch = fpFixed
@@ -581,7 +733,7 @@ object MainForm: TMainForm
           MarkupInfo.Background = clBtnFace
           MarkupInfo.Foreground = clNone
           DigitCount = 2
-          ShowOnlyLineNumbersMultiplesOf = 1
+          ShowOnlyLineNumbersMultiplesOf = 5
           ZeroStart = False
           LeadingZeros = False
         end
@@ -609,38 +761,93 @@ object MainForm: TMainForm
   end
   object Panel4: TPanel
     Left = 480
-    Height = 685
+    Height = 662
     Top = 192
     Width = 475
     Align = alLeft
+    BevelOuter = bvNone
     BorderWidth = 4
-    Caption = 'Panel4'
-    ClientHeight = 685
+    ClientHeight = 662
     ClientWidth = 475
     TabOrder = 2
-    object xmlSubSetTree: TTreeView
-      Left = 5
-      Height = 675
-      Top = 5
-      Width = 465
-      Align = alClient
-      BackgroundColor = clGrayText
-      Color = clGrayText
-      DefaultItemHeight = 16
+    object stSubset: TStaticText
+      Left = 4
+      Height = 32
+      Top = 4
+      Width = 467
+      Align = alTop
+      Caption = 'Result:'
+      Font.Color = 625617
+      Font.Height = -24
+      Font.Name = 'Sans'
+      ParentFont = False
       TabOrder = 0
+    end
+    object xmlSubSetTree: TTreeView
+      Left = 4
+      Height = 622
+      Top = 36
+      Width = 467
+      Align = alClient
+      BackgroundColor = 3158064
+      BorderStyle = bsNone
+      Color = clWhite
+      DefaultItemHeight = 24
+      ExpandSignColor = 625617
+      ExpandSignType = tvestPlusMinus
+      Font.Color = 625617
+      Font.Height = -13
+      Font.Name = '@FreeSans'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      SelectionColor = clPurple
+      TabOrder = 1
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+      Items.Data = {
+        F9FFFFFF020002000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF040000000000
+        000001050000004974656D30FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000
+        0000000000050000004974656D31FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+        00000000000000050000004974656D32FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        000000000000000000050000004974656D33FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFF000000000000000000050000004974656D34FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFF040000000000000001050000004974656D35FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFF000000000000000000050000004974656D36FFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFF000000000000000000050000004974656D37FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF000000000000000000050000004974656D38FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000050000004974656D39
+      }
+      TreeLineColor = 625617
     end
   end
   object Splitter1: TSplitter
     Left = 475
-    Height = 685
+    Height = 662
     Top = 192
     Width = 5
   end
   object Splitter2: TSplitter
     Left = 955
-    Height = 685
+    Height = 662
     Top = 192
     Width = 5
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 854
+    Width = 1507
+    Panels = <    
+      item
+        Width = 350
+      end    
+      item
+        Width = 200
+      end    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
   end
   object SynXMLSyn1: TSynXMLSyn
     DefaultFilter = 'XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd'
